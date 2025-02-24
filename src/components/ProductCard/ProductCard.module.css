@@ -1,0 +1,14 @@
+img {
+  width: 150px;
+  border: 3px solid goldenrod;
+}
+
+section {
+  border: 1px solid black;
+  margin: 1em;
+  padding: 1em;
+}
+
+section:hover {
+  background-color: gray;
+}
