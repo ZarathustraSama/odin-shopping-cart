@@ -1,9 +1,14 @@
-import App from "./App";
+import HomePage from "./components/HomePage/HomePage";
+import ShoppingPage from "./components/ShoppingPage/ShoppingPage";
 
 const routes = [
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
+  },
+  {
+    path: "/shop",
+    element: <ShoppingPage />,
   },
 ];
 
