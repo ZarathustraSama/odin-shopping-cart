@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
-import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import PropTypes from "prop-types";
 import CheckoutBtn from "../CheckoutBtn/CheckoutBtn";
 
 import './NavigationBar.module.css';
 
-export default function NavigationBar() {
+function NavigationBar({ shoppingCart }) {
   return (
     <nav>
       <Link to="/">Home</Link>
       <Link to="/shop">Shop</Link>
-      <ShoppingCart></ShoppingCart>
+      <span>Your cart currently have {shoppingCart.length} items. </span>
       <CheckoutBtn></CheckoutBtn>
     </nav>
   )
 }
+
+NavigationBar.propTypes = {
+  shoppingCart: PropTypes.array.isRequired,
+}
+
+export default NavigationBar;
