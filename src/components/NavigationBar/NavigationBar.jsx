@@ -9,7 +9,7 @@ function NavigationBar({ shoppingCart }) {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/shop">Shop</Link>
-      <span>Your cart currently have {shoppingCart.length} items. </span>
+      <span>Your cart currently has {shoppingCart.length} items. </span>
       <CheckoutBtn></CheckoutBtn>
     </nav>
   )
