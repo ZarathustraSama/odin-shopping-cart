@@ -30,7 +30,7 @@ function ProductCard({ product, shoppingCart, addToCartFn }) {
   }
 
   return (
-    <section className="cartItem">
+    <section className="cartItem" role="cartItem">
       <h2>{product.title} - {(product.price).toFixed(2)} $</h2>
       <img src={product.image} />
       <br />
