@@ -4,7 +4,7 @@ import { useState } from "react";
 import './ProductCard.module.css';
 
 
-function ProductCard({ product, addToCartFn }) {
+function ProductCard({ product, shoppingCart, addToCartFn }) {
   const [quantity, setQuantity] = useState(0);
 
   function onChangeInput(e) {
@@ -26,7 +26,7 @@ function ProductCard({ product, addToCartFn }) {
   function addToCart() {
     if (quantity <= 0) { return };
 
-    addToCartFn({...product, quantity: quantity});
+    addToCartFn([...shoppingCart, {...product, quantity: quantity}]);
   }
 
   return (
@@ -44,6 +44,7 @@ function ProductCard({ product, addToCartFn }) {
 
 ProductCard.propTypes = {
   product: PropTypes.object.isRequired,
+  shoppingCart: PropTypes.arrayOf(Object).isRequired,
   addToCartFn: PropTypes.func.isRequired,
 }
 
