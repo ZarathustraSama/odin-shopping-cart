@@ -12,7 +12,21 @@ a:hover {
   background-color: gray;
 }
 
+button, input {
+  background-color: white;
+  border: 3px solid gold;
+  font-size: large;
+}
+
+button:hover, input:hover {
+  background-color: aquamarine;
+}
+
 nav {
   padding: 1em;
   text-align: center;
+}
+
+span {
+  font-size: large;
 }
