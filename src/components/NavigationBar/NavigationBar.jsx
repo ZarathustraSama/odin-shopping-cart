@@ -8,13 +8,10 @@ function NavigationBar({ shoppingCart = [], checkout = false }) {
   function countItems(shoppingItems) {
     let count = 0;
 
-    console.log(shoppingItems)
     for (let i = 0; i < shoppingItems.length; i++) {
-      console.log("Here")
       count += shoppingItems[i].quantity;
-      
     }
-    console.log(count)
+
     return count;
   }
 
