@@ -19,7 +19,7 @@ function NavigationBar({ shoppingCart = [], checkout = false }) {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/shop">Shop</Link>
-      <span>Your cart currently has {countItems(shoppingCart)} items. </span>
+      <span role="textbox">Your cart currently has {countItems(shoppingCart)} items. </span>
       {checkout ? <button className="checkoutBtn">Checkout</button> : ""}
     </nav>
   )
