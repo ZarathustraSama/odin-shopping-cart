@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-import './ProductCard.module.css';
+import styles from './ProductCard.module.css';
 
 
 function ProductCard({ product, shoppingCart, addToCartFn }) {
@@ -30,9 +30,9 @@ function ProductCard({ product, shoppingCart, addToCartFn }) {
   }
 
   return (
-    <section className="cartItem" role="cartItem">
+    <section className={styles.section} role="cartItem">
       <h2>{product.title} - {(product.price).toFixed(2)} $</h2>
-      <img src={product.image} />
+      <img className={styles.img} src={product.image} />
       <br />
       <input className="quantityInput" onChange={onChangeInput} type="number" value={quantity}/>
       <button className="incrementQuantityBtn" onClick={incrementQuantity}>+</button>

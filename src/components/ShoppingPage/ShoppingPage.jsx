@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import NavigationBar from "../NavigationBar/NavigationBar";
 import ProductCard from "../ProductCard/ProductCard";
 
-import './ShoppingPage.module.css';
+import styles from './ShoppingPage.module.css';
 
 function ShoppingPage({ shoppingCart = [] }) {
   const [products, setProducts] = useState([]);
@@ -21,7 +21,7 @@ function ShoppingPage({ shoppingCart = [] }) {
   return (
     <>
       <NavigationBar shoppingCart={cart} checkout={true} />
-      <main>
+      <main className={styles.main}>
         {products.map(product => {
           return <ProductCard key={product.id} product={product} shoppingCart={cart} addToCartFn={setCart}></ProductCard>
         })}

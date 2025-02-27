@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import './NavigationBar.module.css';
+import styles from './NavigationBar.module.css';
 
 function NavigationBar({ shoppingCart = [], checkout = false }) {
 
@@ -16,11 +16,11 @@ function NavigationBar({ shoppingCart = [], checkout = false }) {
   }
 
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/shop">Shop</Link>
-      <span role="textbox">Your cart currently has {countItems(shoppingCart)} items. </span>
-      {checkout ? <button className="checkoutBtn">Checkout</button> : ""}
+    <nav className={styles.nav}>
+      <Link to="/" className={styles.a}>Home</Link>
+      <Link to="/shop" className={styles.a}>Shop</Link>
+      <span className={styles.span} role="textbox">Your cart currently has {countItems(shoppingCart)} items. </span>
+      {checkout ? <button className={styles.button}>Checkout</button> : ""}
     </nav>
   )
 }
