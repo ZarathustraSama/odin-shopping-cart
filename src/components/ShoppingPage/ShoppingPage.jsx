@@ -20,7 +20,7 @@ function ShoppingPage({ shoppingCart = [] }) {
 
   return (
     <>
-      <NavigationBar shoppingCart={cart}></NavigationBar>
+      <NavigationBar shoppingCart={cart} checkout={true} />
       <main>
         {products.map(product => {
           return <ProductCard key={product.id} product={product} addToCartFn={setCart}></ProductCard>
