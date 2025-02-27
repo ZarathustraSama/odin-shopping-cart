@@ -12,29 +12,29 @@ function ProductCard({ product, addToCartFn }) {
   }
 
   function incrementQuantity() {
-    const newValue = quantity + 1;
+    const newValue = parseInt(quantity) + 1;
     setQuantity(newValue);
   }
 
   function decrementQuantity() {
     if (quantity <= 0) { return };
     
-    const newValue = quantity - 1;
+    const newValue = parseInt(quantity) - 1;
     setQuantity(newValue);
   }
 
   function addToCart() {
-    const newProduct = {...product, quantity: quantity};
+    if (quantity <= 0) { return };
 
-    addToCartFn(newProduct);
+    addToCartFn({...product, quantity: quantity});
   }
 
   return (
     <section>
-      <h2>{product.title}</h2>
+      <h2>{product.title} - {(product.price).toFixed(2)} $</h2>
       <img src={product.image} />
-      <p>The price is {product.price}</p>
-      <input className="quantityInput" onChange={onChangeInput} type="number"></input>
+      <br />
+      <input className="quantityInput" onChange={onChangeInput} type="number" value={quantity}/>
       <button className="incrementQuantityBtn" onClick={incrementQuantity}>+</button>
       <button className="decrementQuantityBtn" onClick={decrementQuantity}>-</button>
       <button className="addToCartBtn" onClick={addToCart}>Add To Cart</button>
