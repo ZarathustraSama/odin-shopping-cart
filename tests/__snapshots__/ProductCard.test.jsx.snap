@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductCard > should render the relative item with its details 1`] = `
+<div>
+  <section
+    class="cartItem"
+    role="cartItem"
+  >
+    <h2>
+      Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+       - 
+      109.95
+       $
+    </h2>
+    <img
+      src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    />
+    <br />
+    <input
+      class="quantityInput"
+      type="number"
+      value="0"
+    />
+    <button
+      class="incrementQuantityBtn"
+    >
+      +
+    </button>
+    <button
+      class="decrementQuantityBtn"
+    >
+      -
+    </button>
+    <button
+      class="addToCartBtn"
+    >
+      Add To Cart
+    </button>
+  </section>
+</div>
+`;

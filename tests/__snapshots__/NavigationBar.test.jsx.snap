@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavigationBar component > renders a simple navbar with links and a span element 1`] = `
+<div>
+  <nav>
+    <a
+      data-discover="true"
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      data-discover="true"
+      href="/shop"
+    >
+      Shop
+    </a>
+    <span
+      role="textbox"
+    >
+      Your cart currently has 
+      0
+       items. 
+    </span>
+  </nav>
+</div>
+`;

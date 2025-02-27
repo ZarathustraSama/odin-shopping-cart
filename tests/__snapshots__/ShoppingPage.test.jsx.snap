@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShoppingPage > should render a NavBar component before fetching 1`] = `
+<div>
+  <nav>
+    <a
+      data-discover="true"
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      data-discover="true"
+      href="/shop"
+    >
+      Shop
+    </a>
+    <span
+      role="textbox"
+    >
+      Your cart currently has 
+      0
+       items. 
+    </span>
+    <button
+      class="checkoutBtn"
+    >
+      Checkout
+    </button>
+  </nav>
+  <main />
+</div>
+`;
